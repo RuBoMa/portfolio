@@ -1,5 +1,5 @@
 ---
-const skills = [
+const devSkills = [
   {
     name: "Rust",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
@@ -46,25 +46,101 @@ const skills = [
     color: "bg-gray-700 hover:bg-gray-600",
   },
 ];
+
+const cyberSkills = [
+  {
+    name: "Kali Linux",
+    logo: "https://cdn.simpleicons.org/kalilinux/557C94",
+    color: "bg-slate-800 hover:bg-slate-700",
+  },
+  {
+    name: "Linux",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+    color: "bg-gray-800 hover:bg-gray-700",
+  },
+  {
+    name: "Bash",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
+    color: "bg-green-900 hover:bg-green-800",
+  },
+  {
+    name: "Wireshark",
+    logo: "https://cdn.simpleicons.org/wireshark/1679A7",
+    color: "bg-sky-900 hover:bg-sky-800",
+  },
+  {
+    name: "Nmap",
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2381d4fa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='2' x2='12' y2='12'/%3E%3Cline x1='12' y1='12' x2='18' y2='6'/%3E%3C/svg%3E",
+    color: "bg-indigo-900 hover:bg-indigo-800",
+  },
+  {
+    name: "Burp Suite",
+    logo: "https://cdn.simpleicons.org/portswigger/FF6633",
+    color: "bg-orange-900 hover:bg-orange-800",
+  },
+  {
+    name: "Metasploit",
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2356b4e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3C/svg%3E",
+    color: "bg-blue-900 hover:bg-blue-800",
+  },
+  {
+    name: "Netcat",
+    logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2380cbc4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Cpath d='M7 10l3 2-3 2'/%3E%3Cline x1='13' y1='14' x2='17' y2='14'/%3E%3C/svg%3E",
+    color: "bg-teal-900 hover:bg-teal-800",
+  },
+];
 ---
 
 <section class="max-w-4xl mx-auto my-12 px-4">
-  <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-  <div class="flex flex-wrap justify-center gap-4">
-    {
-      skills.map((skill) => (
-        <div
-          class={`${skill.color} text-white px-4 py-3 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center gap-3 min-w-fit`}
-        >
-          <img
-            src={skill.logo}
-            alt={`${skill.name} logo`}
-            class="w-6 h-6 object-contain"
-            loading="lazy"
-          />
-          <span class="text-sm font-medium">{skill.name}</span>
-        </div>
-      ))
-    }
+  <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+
+  <div class="mb-8">
+    <h3
+      class="text-lg font-semibold text-gray-400 mb-4 text-center uppercase tracking-wider"
+    >
+      Development
+    </h3>
+    <div class="flex flex-wrap justify-center gap-4">
+      {
+        devSkills.map((skill) => (
+          <div
+            class={`${skill.color} text-white px-4 py-3 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center gap-3 min-w-fit`}
+          >
+            <img
+              src={skill.logo}
+              alt={`${skill.name} logo`}
+              class="w-6 h-6 object-contain"
+              loading="lazy"
+            />
+            <span class="text-sm font-medium">{skill.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div>
+    <h3
+      class="text-lg font-semibold text-gray-400 mb-4 text-center uppercase tracking-wider"
+    >
+      Cybersecurity
+    </h3>
+    <div class="flex flex-wrap justify-center gap-4">
+      {
+        cyberSkills.map((skill) => (
+          <div
+            class={`${skill.color} text-white px-4 py-3 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center gap-3 min-w-fit`}
+          >
+            <img
+              src={skill.logo}
+              alt={`${skill.name} logo`}
+              class="w-6 h-6 object-contain"
+              loading="lazy"
+            />
+            <span class="text-sm font-medium">{skill.name}</span>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
